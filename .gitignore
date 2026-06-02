@@ -1,0 +1,10 @@
+# this kit handles NO secrets (devs use their own Claude login).
+# still, never let local/secret junk in:
+.env
+.env.*
+*.key
+secrets.json
+team.config.local
+.DS_Store
+node_modules/
+brain/*.pglite/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>claude - team onboarding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --line:#252c36;
+    --txt:#e6edf3; --dim:#9aa7b4; --faint:#5b6672;
+    --acc:#3fb950; --acc2:#58a6ff; --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:"Inter",system-ui,sans-serif;
+    font-weight:300;line-height:1.6;padding:clamp(1.5rem,5vw,4rem);max-width:780px;margin:0 auto;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--acc);color:#04130a}
+  .kic{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.7rem;
+    color:var(--acc);border:1px solid var(--line);border-radius:6px;padding:.3rem .6rem;margin-bottom:1.6rem}
+  .kic::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--acc)}
+  h1{font-weight:600;font-size:clamp(2rem,6vw,3.2rem);line-height:1.05;letter-spacing:-.03em;margin-bottom:1rem}
+  h1 span{color:var(--acc)}
+  .lede{font-size:clamp(1.05rem,2.6vw,1.3rem);color:var(--dim);font-weight:300;max-width:52ch}
+  section{margin-top:clamp(2.8rem,7vw,4.5rem)}
+  h2{font-weight:500;font-size:1.35rem;letter-spacing:-.01em;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+  h2 .n{font-family:var(--mono);font-size:.8rem;color:var(--faint);font-weight:400}
+  p{color:var(--dim);margin-bottom:.8rem;max-width:64ch}
+  strong{color:var(--txt);font-weight:500}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:clamp(1.2rem,3vw,1.8rem)}
+  code,.cmd{font-family:var(--mono);font-size:.88em;background:#0b0f14;border:1px solid var(--line);
+    border-radius:5px;padding:.15rem .45rem;color:var(--acc2)}
+  ol{list-style:none;counter-reset:s;display:grid;gap:.9rem;margin-top:.4rem}
+  ol li{counter-increment:s;position:relative;padding-left:2.6rem;color:var(--dim)}
+  ol li::before{content:counter(s);position:absolute;left:0;top:0;width:1.7rem;height:1.7rem;
+    border:1px solid var(--acc);color:var(--acc);border-radius:6px;display:grid;place-items:center;
+    font-family:var(--mono);font-size:.85rem}
+  .grid{display:grid;gap:.7rem}
+  .row{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:var(--mono);font-size:.8rem;color:var(--acc);white-space:nowrap}
+  .row .v{color:var(--dim);font-size:.95rem}
+  hr{border:0;height:1px;background:var(--line);margin:clamp(2.5rem,6vw,4rem) 0}
+  footer{margin-top:3rem;color:var(--faint);font-size:.85rem;font-family:var(--mono)}
+  a{color:var(--acc2);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="kic">claude · team kit</div>
+  <h1>you're <span>set up.</span></h1>
+  <p class="lede">claude now knows how your team works, has your tools wired, and remembers what you do. two minutes here, then ship.</p>
+
+  <section>
+    <h2><span class="n">01</span> get in</h2>
+    <div class="panel">
+      <ol>
+        <li><strong>claude is already starting</strong> in your terminal - the installer just handed off to it.</li>
+        <li>first run only: sign in with <strong>your own Claude account</strong> (Pro/Max) in the browser that opens. once, and you're done.</li>
+        <li>coming back tomorrow? open a terminal, type <code>claude</code>. that's the whole ritual.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">02</span> what's loaded</h2>
+    <div class="panel grid">
+      <div class="row"><span class="k">standards</span><span class="v">your team's commit, PR, test, and no-secrets rules - held to, not just suggested</span></div>
+      <div class="row"><span class="k">process</span><span class="v">it sizes the work: quick fix → code · feature → plan first · big build → research, plan, review</span></div>
+      <div class="row"><span class="k">tools</span><span class="v">version-accurate docs, a browser for QA, github - wired and ready</span></div>
+      <div class="row"><span class="k">memory</span><span class="v">a private local brain, so you never explain the codebase twice</span></div>
+      <div class="row"><span class="k">skills</span><span class="v">your engineering playbook + superpowers: brainstorming, TDD, root-cause debugging</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">03</span> try it</h2>
+    <div class="panel grid">
+      <div class="row"><span class="k">start here</span><span class="v">cd into any repo, run <code>claude</code>, say “get me oriented” - easiest first win</span></div>
+      <div class="row"><span class="k">plan</span><span class="v">paste a ticket, say “plan this” - it picks the right depth for the job</span></div>
+      <div class="row"><span class="k">debug</span><span class="v">“why is this failing?” - root-cause investigation, not guess-patching</span></div>
+      <div class="row"><span class="k">ship</span><span class="v">“review my diff and open a PR” when you're ready to land it</span></div>
+    </div>
+  </section>
+
+  <hr>
+  <p style="color:var(--faint);font-size:.95rem">something off? tell claude “something's not working” - it can re-check and repair its own setup.</p>
+  <footer>// you're ready. pick a repo and go.</footer>
+</body>
+</html>
